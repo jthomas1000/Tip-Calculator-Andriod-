@@ -34,13 +34,13 @@ public class MainActivity extends AppCompatActivity {
                 String o = String.valueOf(binding.editPeople);
                 BigDecimal peopleCalc = new BigDecimal(o);
 
-               if ( i == "" || i == "0" ){
+               if (i.equals("") || i.equals("0")){
                    binding.outputField.setText("");
                }
-               else if ( e == "" || e == "0" ){
+               else if (e.equals("") || e.equals("0")){
                     binding.outputField.setText("");
                }
-               else if ( o == "" || o == "0" ){
+               else if (o.equals("") || o.equals("0")){
                     binding.outputField.setText("");
                }
                else{
