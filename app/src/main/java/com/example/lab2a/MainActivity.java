@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 
 import java.math.BigDecimal;
+import java.text.NumberFormat;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -48,7 +49,10 @@ public class MainActivity extends AppCompatActivity {
                    BigDecimal billTotal = billCalc.add(tipTotal);
                    BigDecimal finalTotal = billTotal.divide(peopleCalc);
 
-                   binding.outputField.setText(String.valueOf(finalTotal));
+                   double amount = finalTotal.doubleValue();
+                   NumberFormat nf = NumberFormat.getCurrencyInstance();
+                   String currency = nf.format(amount);
+                   binding.outputField.setText(currency);
 
                }
             }
