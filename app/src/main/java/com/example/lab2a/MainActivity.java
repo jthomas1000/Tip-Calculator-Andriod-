@@ -28,11 +28,11 @@ public class MainActivity extends AppCompatActivity {
                 String r = "100";
 
                 BigDecimal rounder = new BigDecimal(r);
-                String i = String.valueOf(binding.editTip);
+                String i = String.valueOf(binding.editTip.getText());
                 BigDecimal tipCalc = new BigDecimal(i);
-                String e = String.valueOf(binding.editTotalbill);
+                String e = String.valueOf(binding.editTotalbill.getText());
                 BigDecimal billCalc = new BigDecimal(e);
-                String o = String.valueOf(binding.editPeople);
+                String o = String.valueOf(binding.editPeople.getText());
                 BigDecimal peopleCalc = new BigDecimal(o);
 
                if (i.equals("") || i.equals("0")){
